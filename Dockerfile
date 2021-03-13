@@ -51,7 +51,7 @@ RUN true \
 
 RUN true \
 && { \
-	meson setup build/ pacman-${pacman_version}/ \
+	env PATH=/sbin:/bin meson setup build/ pacman-${pacman_version}/ \
 		--buildtype=release \
 		--prefix=/usr/local \
 		--libdir=lib \
