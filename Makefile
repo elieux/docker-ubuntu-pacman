@@ -1,5 +1,5 @@
 ubuntu_version:=22.04
-pacman_version:=6.0.2
+pacman_version:=6.1.0
 tag:=elieux/ubuntu-pacman:$(pacman_version)-ubuntu$(ubuntu_version)
 
 .PHONY: image

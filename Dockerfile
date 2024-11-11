@@ -40,8 +40,8 @@ RUN : \
 ;
 
 RUN : \
-&& curl -sLO https://sources.archlinux.org/other/pacman/pacman-${pacman_version}.tar.xz \
-&& curl -sLO https://sources.archlinux.org/other/pacman/pacman-${pacman_version}.tar.xz.sig \
+&& curl -sLO https://gitlab.archlinux.org/pacman/pacman/-/releases/v${pacman_version}/downloads/pacman-${pacman_version}.tar.xz \
+&& curl -sLO https://gitlab.archlinux.org/pacman/pacman/-/releases/v${pacman_version}/downloads/pacman-${pacman_version}.tar.xz.sig \
 && gpg --verify --status-fd 1 pacman-${pacman_version}.tar.xz.sig pacman-${pacman_version}.tar.xz | grep -qE '^\[GNUPG:\] TRUST_(FULLY|ULTIMATE).*$' \
 && tar -xf pacman-${pacman_version}.tar.xz \
 && rm pacman-${pacman_version}.tar.xz pacman-${pacman_version}.tar.xz.sig \
